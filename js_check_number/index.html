@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div id="main">
+        <div id="sub">
+         <h1>GUESS THE NUMBER</h1>
+         <input type="text" id="input">
+         <button type="submit" onclick='guess()'>check</button>
+         <p id="p1">You are right/wrong</p>
+         <p id="p2">Your score = </p>
+         <p id="p3"></p>
+        </div>
+    </div>
+          <script>
+                      let point = 0
+                      let score = 0
+                   function guess()
+                   {
+                      const input1 = Number(document.getElementById("input").value);
+                      const randomnumber = Math.floor(Math.random()*5);
+                       
+                      
+                      if(input1==randomnumber)
+                      {       
+                                     
+                            point = 1
+                           let input2 = document.getElementById("p1")
+                           input2.innerHTML = "You are right!!!!";
+                      }
+                      else{
+                        point = 0
+                           let input2 = document.getElementById("p1")
+                           input2.innerHTML = "You are wrong!!!!";
+                      }
+
+                      score+=point
+                      if(score==5)
+                      {
+                       alert("You are the winner")
+                      }
+                           let input3 = document.getElementById("p2")
+                           input3.innerHTML = "Your score = " + score;
+
+                   }               
+ 
+
+          </script>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+body{
+    background-color: palevioletred;
+
+}
+#main
+{
+    position: absolute;
+    top: 5cm;
+    left: 15cm;
+    background-color: antiquewhite;
+    height: 10cm;
+    width: 10cm;
+}
+#sub
+{
+    position: absolute;
+    left: 2.4cm;
+    top: 2cm;
+}
